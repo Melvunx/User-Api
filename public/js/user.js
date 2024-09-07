@@ -16,9 +16,9 @@ const sortedImg = arrayImg.sort();
 const randomImage = (array) => {
   let path = "./public/img/";
   let randomIndex = Math.floor(Math.random() * array.length);
-  // console.log("index: ", randomIndex);
+  console.log("index: ", randomIndex);
   let image = path + array[randomIndex];
-  // console.log("Image choisie: ", image);
+  console.log("Image choisie: ", image);
   return image;
 };
 
@@ -55,7 +55,6 @@ async function userDisplay() {
   document.body.innerHTML = userData
     .map(
       (user) =>
-        // <img src="${randomImage(sortedImg)}" alt ="Image de fond">
         `
     <div class="card">
     <div class="card-content">
@@ -86,5 +85,4 @@ async function userDisplay() {
     card.style.backgroundSize = "cover";
   });
 }
-//${}
 userDisplay();
